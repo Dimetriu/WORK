@@ -7,20 +7,19 @@
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <header class="header">
+	<h4>Simple Todo Lists</h4>
+</header>
 </head>
 <body>
-<header class="header">
-	<h4>Simple Todo Lists</h4>	
-</header>
-	<article class="article">
+	<!--<article class="article">
 		<p>fron Ruby Garage</p>
-	</article>
+	</article>-->
 <div class="container">
 	<%= yield %>
 </div>
+</body>
 <footer class="footer">
 	<p>&copy; Dima Rashidov, 2016</p>
 </footer>
-
-</body>
 </html>
