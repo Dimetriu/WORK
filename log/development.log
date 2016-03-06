@@ -8810,3 +8810,22 @@ Started GET "/assets/todo_lists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-03-06 18:10:30 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-06 19:23:57 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 295ms (Views: 270.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/todo_lists/16" for 127.0.0.1 at 2016-03-06 19:24:03 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  [["todo_list_id", 16]]
+  Rendered todo_items/_todo_item.html.erb (2.2ms)
+  Rendered todo_items/_form.html.erb (9.3ms)
+  Rendered todo_lists/show.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 62ms (Views: 53.2ms | ActiveRecord: 0.7ms)
