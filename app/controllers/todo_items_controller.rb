@@ -1,4 +1,5 @@
 class TodoItemsController < ApplicationController
+before_filter :authenticate_user!, except: [:show, :index]
 before_action :set_todo_list
 before_action :set_todo_item, except: [:create]
 
