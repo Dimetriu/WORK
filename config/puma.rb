@@ -18,3 +18,5 @@ on_worker_boot do
      Resque.redis = ENV["<redis-uri>"] || "redis://127.0.0.1:6379"
   end
 end
+end
+
